@@ -84,11 +84,13 @@ function convertorStateReducer (convertorState:ConvertorState, convertorStateCha
     // instructions
     //--------------------------------------------------------------
     switch (instruction) {
+        // if checkbox 'convert on input' is not active, convert manually with button
         case 'HANDLE_BUTTON_CONVERT_INPUT':
 
             shouldUseConversion = true;
 
         break;
+        // checkbox 'convert on input'
         case 'HANDLE_CHECKBOX_CONVERT_ON_INPUT':
 
             if (!convertorState.shouldConvertOnInput)
@@ -97,6 +99,7 @@ function convertorStateReducer (convertorState:ConvertorState, convertorStateCha
             newState.shouldConvertOnInput = !convertorState.shouldConvertOnInput;
         
         break;
+        // checkbox 'display tags'
         case 'HANDLE_CHECKBOX_DISPLAY_TAGS':
 
             shouldUseConversion = true;
@@ -104,6 +107,7 @@ function convertorStateReducer (convertorState:ConvertorState, convertorStateCha
             newState.shouldDisplayTags = !newState.shouldDisplayTags;
             
         break;
+        // typing into text area
         case 'HANDLE_TEXTAREA_INPUT':
 
             if (convertorState.shouldConvertOnInput) //does not have ! operator as condition above
@@ -112,6 +116,8 @@ function convertorStateReducer (convertorState:ConvertorState, convertorStateCha
             newState.inputString = data as string;
         
         break;
+        // this concerns actions of quest preview
+        // answer clicking and checking
         case 'HANDLE_RUNTIME':
 
             if (data) {
