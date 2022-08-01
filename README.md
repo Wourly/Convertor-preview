@@ -1,7 +1,7 @@
 ### Repository with presentation files
 
 # Convertor
-[Link to application](http://questor.wz.cz/convertor)
+Link to application is not currently available due to issues with hosting provider. If you would like to see previous application (without real-time test preview), check it [here](http://wourly.xf.cz/questor/Convertor/)
 
 Convertor is an app, that uses simple syntax to generate web quizzes quickly. With real-time preview and powerful parser (reading engine) it will immediately tell you, how your quiz looks. And if there is a typo? Don't worry, Convertor will show you, where it is and how to fix it!
 
