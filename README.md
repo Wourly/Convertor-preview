@@ -68,4 +68,4 @@ Convertor is currently programmed in React with TypeScript, while Questor is sti
 
 This preview repository presents Convertor.tsx as a file with main app component, functions.tsx shares code for both Convertor and Questor and tokenizer.tsx, which is the beggining of parsing process.
 
-Additional info: between Convertor.tsx and tokenizer.tsx there is parser, that generates all output for Convertor and convertion processor, that filters only some errors at the same time (readability) and presents simpler connection between parser and convertor. Parser is both quite complex for description and is very versatile, so I keep code for myself.
+Additional info: between Convertor.tsx and tokenizer.tsx there is parser, that generates all output for Convertor and "Convertion processor" module, that filters only some errors at the one time (for readability) and presents simpler connection between parser and convertor. Parser is both quite complex for description and is very versatile, so I keep code for myself.
