@@ -76,9 +76,9 @@ Convertor is written in **React + TypeScript**. The core logic relies on a token
 
 Questor (the quiz player) is currently built in Vanilla JS and is being rewritten in TS to align with Convertor.
 
-*The full parser engine is intentionally kept separate, as it's both highly complex and proprietary in structure. It’s shown during interviews or on request.*
-
 While the parser is robust and modular, its full source code is not included here — the focus is on showcasing input, output, and integration logic via the files:
 - `Convertor.tsx` – main component with reducer & UI
 - `functions.ts` – shared utilities
 - `tokenizer.ts` – initial parsing logic
+
+*The full parser engine is intentionally kept separate, as it's both highly complex and proprietary in structure. It’s shown during interviews or on request.*
