@@ -1,11 +1,11 @@
 ### Repository with presentation files
 
 # Convertor
-Link to application is not currently available due to issues with hosting provider. If you would like to see previous application (without real-time test preview), check it [here](http://wourly.xf.cz/questor/Convertor/). (link is currently not functional, will be updated) For now you can just check this video: https://www.youtube.com/watch?v=PbSgLuRLlyA
+Link to application is not currently available due to issues with hosting provider. If you would like to see previous application (without real-time test preview), check it [here](https://mmconvertorpromo.netlify.app/Convertor). You can just check [video](https://www.youtube.com/watch?v=PbSgLuRLlyA), which shows, how Convertor is used. 
 
 Convertor is an app, that uses simple syntax to generate web quizzes quickly. With real-time preview and powerful parser (reading engine) it will immediately tell you, how your quiz looks. And if there is a typo? Don't worry, Convertor will show you, where it is and how to fix it!
 
-Among many applications, Convertor is focused on students' purposes. Once students grasp Convertor's syntax, they can create their own quizzes, while they make their notes.
+Among many applications, Convertor is focused on students' purposes. Once students grasp Convertor's syntax, they can create their own quizzes, while they create their notes.
 
 Not only repetition helps with memorizing, but asking correct questions is crucial to understand topics. Convertor encourages for both things without slowing you down.
 
@@ -17,7 +17,7 @@ App, that uses Convertor's output and sends you on your learning journey.
 
 ## Convertor syntax
 
-Although under these lines is syntax, there is theoretically no need to remember it, Convertor will always tell you, if there is something missing.
+Below is an overview of the syntax, although Convertor provides contextual validation and guidance directly in the interface.
 
 There is a rule, however: each line of text has its own meaning.
 
@@ -53,7 +53,7 @@ When using text answer, each _ is substituted by space.
 
 #### Other elements
 
-Each question can have tags, these things associate simillar questions, so if your quest is a long journey, you may want to proceed with adequate pace.
+Each question can have tags, these things associate similar questions, so if your quest is a long journey, you may want to proceed with adequate pace.
 
 + \# Tag of your own.
 + \## Tag group, which can contain tags.
@@ -68,4 +68,15 @@ Convertor is currently programmed in React with TypeScript, while Questor is sti
 
 This preview repository presents Convertor.tsx as a file with main app component, functions.tsx shares code for both Convertor and Questor and tokenizer.tsx, which is the beggining of parsing process.
 
-Additional info: between Convertor.tsx and tokenizer.tsx there is parser, that generates all output for Convertor and "Convertion processor" module, that filters only some errors at the one time (for readability) and presents simpler connection between parser and convertor. Parser is both quite complex for description and is very versatile, so I keep code for myself.
+Additional info: between Convertor.tsx and tokenizer.tsx there is parser, that generates all output for Convertor and "Convertion processor" module, that filters only some errors at one time (for readability) and presents simpler connection between parser and convertor. Parser is both quite complex for description and is very versatile, so I keep code for myself.
+
+### 👨‍💻 Developer Notes
+
+Convertor is written in **React + TypeScript**. The core logic relies on a tokenizer and parser that analyze structured text into a question model. A central reducer manages state, supporting real-time validation and transformation into JSON output.
+
+Questor (the quiz player) is currently built in Vanilla JS and is being rewritten in TS to align with Convertor.
+
+While the parser is robust and modular, its full source code is not included here — the focus is on showcasing input, output, and integration logic via the files:
+- `Convertor.tsx` – main component with reducer & UI
+- `functions.ts` – shared utilities
+- `tokenizer.ts` – initial parsing logic
